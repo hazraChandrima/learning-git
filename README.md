@@ -33,3 +33,9 @@ git log
 created lalala.txt and filled it with rubbish.
 git add -A
 git commit -m "updated README.md and created lalala.txt"
+
+4:00pm : Now I stuffed in some more rubbish in lalala.txt
+ git commit -a -m "updated README.md and stuffed some more rubbish in lalala.txt"
+I then renamed lalala.txt to rubbish.txt
+git add --all
+git commit -m "updated README.md and created lalala.txt"
