@@ -24,6 +24,9 @@ Then made a small change in intro.html file and checked the status
 git status --short
 and it showed M intro.html, M meaning modified.
 
-so you can even commit without staging, as I am going to do now:
+so you can even commit changes without staging, as I am going to do now:
 git commit -a -m "updated README.md"
+
+to view history of all your commits:
+git log
 
