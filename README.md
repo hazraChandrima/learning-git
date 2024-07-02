@@ -15,11 +15,15 @@ git status
 then created this README.md file.
 
 2:50pm : Now I've created a crappy-style.css file, to make my intro.html file feel less shameful.
-git add --all 
+git add --all / git add -A
 This staged both my newly added files into the repository.
 
 3:18pm : Made my first commit into the repo.
 git commit -m "here's my first commit"
 Then made a small change in intro.html file and checked the status 
 git status --short
+and it showed M intro.html, M meaning modified.
+
+so you can even commit without staging, as I am going to do now:
+git commit -a -m "updated README.md"
 
