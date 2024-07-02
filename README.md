@@ -18,7 +18,7 @@ then created this README.md file.
 git add --all / git add -A
 This staged both my newly added files into the repository.
 
-3:18pm : Made my first commit into the repo.
+3:18pm : Made my first commit into the repo. YOU WILL ALWAYS HAVE TO STAGE YOUR COMMITS FIRST!!!
 git commit -m "here's my first commit"
 Then made a small change in intro.html file and checked the status 
 git status --short
@@ -30,3 +30,6 @@ git commit -a -m "updated README.md"
 to view history of all your commits:
 git log
 
+created lalala.txt and filled it with rubbish.
+git add -A
+git commit -m "updated README.md and created lalala.txt"
