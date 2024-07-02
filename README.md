@@ -1,3 +1,5 @@
+//written in main branch
+
 This repository is just made to teach myself Git.
 2-7-24,2:31pm : Just learnt:
 git --version
@@ -39,3 +41,24 @@ git commit -m "updated README.md and created lalala.txt"
 I then renamed lalala.txt to rubbish.txt
 git add --all
 git commit -m "updated README.md and created lalala.txt"
+
+
+
+//written in intro-image branch
+
+4:48pm : I created a new branch named intro-image.
+git branch intro-image
+git checkout intro-image
+
+Then I added some relatable chess memes in intro.html.
+git add --all
+git status --short
+A  chess-meme1.png
+A  chess-meme2.jpeg
+M  crappy-style.css
+M  intro.html
+
+git commit -m "added some chess memes in intro.html"
+git log
+
+
