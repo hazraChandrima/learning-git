@@ -63,4 +63,18 @@ git log
 
 ls command gives list of all the fiels present in the current dir.
 
+5:32pm : made another branch named "just-remembered-something"
+git checkout -b just-remembered-something
+git branch
 
+Then I made some changes in intro.html.
+git commit -a -m "not important to know, just too lazy to type a commit message"
+git log
+
+Then I merged this branch with the main branch.
+Before that I need to switch to the main branch.
+git checkout main
+git merge just-remembered-something
+
+Since both branches were now pointing to the same commit, I deleted the just-remembered-something branch.
+git branch -d just-remembered-something
