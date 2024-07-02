@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(98, 158, 255);
+    font-size: larger;
+    color: ghostwhite;
+}
+
+p{
+    margin-left: 30px;
+    font-weight: 600;
+}
