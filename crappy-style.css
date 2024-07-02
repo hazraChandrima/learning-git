@@ -8,3 +8,9 @@ p{
     margin-left: 30px;
     font-weight: 600;
 }
+
+.memes{
+    height:fit-content;
+    width:fit-content;
+    margin:40px auto;
+}
