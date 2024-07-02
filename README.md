@@ -18,3 +18,8 @@ then created this README.md file.
 git add --all 
 This staged both my newly added files into the repository.
 
+3:18pm : Made my first commit into the repo.
+git commit -m "here's my first commit"
+Then made a small change in intro.html file and checked the status 
+git status --short
+
