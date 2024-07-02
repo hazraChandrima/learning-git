@@ -61,4 +61,6 @@ M  intro.html
 git commit -m "added some chess memes in intro.html"
 git log
 
+ls command gives list of all the fiels present in the current dir.
+
 
