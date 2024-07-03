@@ -149,7 +149,11 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean.
 👍
 
+This can be done in another, much shorter way as well, by using the pull command, which is a combination of fetch and pull command.
+$ git diff origin/main
+$ git pull origin
 
+That's it for this repo. 😉
 
 
 
