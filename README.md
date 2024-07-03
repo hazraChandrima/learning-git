@@ -120,3 +120,37 @@ And I was done.
 
 
 
+
+
+
+.
+...
+.....
+
+Not yet, actually. I edited this README.md file on GitHub, and wanted to update my local Git repo as well.
+$ git status
+showed me:
+On branch main
+Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+
+nothing to commit, working tree clean.
+
+$ git fetch origin
+$ git log origin/main
+$ git diff origin/main
+$ git merge origin/main
+
+$ git status
+Now, it showed:
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean.
+👍
+
+
+
+
+
+
