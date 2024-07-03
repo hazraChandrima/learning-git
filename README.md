@@ -154,6 +154,13 @@ $ git diff origin/main
 $ git pull origin
 
 That's it for this repo. 😉
+ok
 
-buggy-boi
 
+
+thank you.
+this line has been written in branch 2.
+another line has been added.
+this line has been written in branch 3.
+this line has been written in branch 4.
+this line has been written in branch 5.
