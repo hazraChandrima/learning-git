@@ -8,7 +8,7 @@
 
 `$ git config --global usesr.name "chandrima-hazra"`
 
-`$ git config --global user.email "hazrachandrima6@gmail.com"`
+`$ git config --global user.email "*****@gmail.com"`
 
 `$ mkdir july-proj`
 
