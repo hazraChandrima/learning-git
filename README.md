@@ -34,19 +34,16 @@ then created a naked intro.html file and checked whether the changes I had made 
 $ git status
 ```
 
-and then staged it to the repository and checked whether the changes I had made was tracked or not: 
+and then staged it to the repository: 
 ``` bash
 $ git add intro.html
-```
-``` bash
-$ git status
 ```
 
 Then created this README.md file.
 
 #
 
-2:50pm : Now I've created a crappy-style.css file, to make my intro.html file feel less shameful.
+2:50pm : Now I've created a crappy-style.css file, to make my intro.html file feel less shameful. After that,
 
 ``` bash
 $ git add --all
@@ -56,7 +53,7 @@ OR
 $ git add -A
 ```
 
-This staged both my newly added files into the repository.
+This staged both my newly added files, README.md and crappy-style.css into the repository.
 #
 
 3:18pm : Made my first commit into the repo. YOU WILL ALWAYS HAVE TO STAGE YOUR COMMITS FIRST!!!
@@ -75,52 +72,34 @@ so you can even commit changes without writing add command, as I am going to do 
 ``` bash
 $ git commit -a -m "updated README.md"
 ```
+#
+## To view history of all your commits:
 
-to view history of all your commits:
 ``` bash
 $ git log
 ```
+It shows all the previous commits you have done for this repo, along with the SHA(Secure Hash Algorithm) sequence for each commit.
 
-created lalala.txt and filled it with rubbish.
-
+### Reverting back to any of the previous commits :
 ``` bash
-$ git add -A
-```
-
-``` bash
-$ git commit -m "updated README.md and created lalala.txt"
-```
-
-#
-
-4:00pm : Now I stuffed in some more rubbish in lalala.txt.
-
-``` bash
-$ git commit -a -m "updated README.md and stuffed some more rubbish in lalala.txt"
-```
-
-I then renamed lalala.txt to rubbish.txt.
-
-``` bash
-$ git add --all
-```
-
-``` bash
-$ git commit -m "updated README.md and created lalala.txt"
+$ git revert <SHA sequence (of the commit we want to revrt back to)>
 ```
 
 #
 
 //written in intro-image branch
 
+## Creating a new branch 
+
 4:48pm : I created a new branch named intro-image.
 
 ``` bash 
 $ git branch intro-image
-```
-
-``` bash
 $ git checkout intro-image
+```
+OR
+``` bash
+$ git checkout -b intro-image
 ```
 
 Then I added some relatable chess memes in intro.html.
@@ -144,10 +123,9 @@ $ git status --short
 ``` bash
 $ git commit -m "added some chess memes in intro.html"
 ```
+#
 
-``` bash 
-$ git log
-```
+### View the list of all the files/ folders in a repo/dir
 
 `ls` command gives list of all the files present in the current dir.
 
@@ -168,10 +146,8 @@ Then I made some changes in intro.html.
 ``` bash
 $ git commit -a -m "not important to know, just too lazy to type a commit message"
 ```
-
-``` bash
-$ git log
-```
+#
+## Merging with the main/master branch
 
 Then I merged this branch with the main branch.
 Before that I need to switch to the main branch.
@@ -184,10 +160,13 @@ $ git checkout main
 $ git merge just-remembered-something
 ```
 
+### Deleting a branch
+
 Since both branches were now pointing to the same commit, I deleted the just-remembered-something branch.
 ``` bash
 $ git branch -d just-remembered-something
 ```
+#
 
 Now, back to intro-image branch, just made some more changes to the intro.html, style.css and README.md files.
 
@@ -212,8 +191,10 @@ $ git checkout main
 ``` bash
 $ git merge intro-image
 ```
+#
+##  Resolving conflicts when merging with main/master 
 
-This command resulted in a conflict between the 2 branches in intro.html, which, ofcourse, I created on purpose for the sake of learning.
+The merge command resulted in a conflict between the 2 branches in the file intro.html, which, ofcourse, I created on purpose for the sake of learning.
 Then I made necessary chanegs in the file of our concern and resolved the conflict.
 
 ``` bash
@@ -228,6 +209,9 @@ $ git commit -m "resolved conflicts"
 $ git branch -d intro-image
 ```
 
+#
+## Configuring remote origin
+
 Then I went to GitHub, created this repo, copied the URL and wrote the following command:
 ``` bash
 $ git remote add origin  https://github.com/hazraChandrima/learning-git.git~
@@ -239,20 +223,24 @@ Now, to check whether this remote origin exists, I write:
 ``` bash
 $ git remote -v
 ```
+and it showed: 
 
 ```origin  https://github.com/hazraChandrima/learning-git.git~ (fetch)```
 
 ```origin  https://github.com/hazraChandrima/learning-git.git~ (push)```
 
-But then I realised that I didn't copy the URL correcctly. So, I removed remote origin.
+### Removing remote origin
+
+But then I realised that I didn't copy the URL correctly. So, I removed remote origin.
 ``` bash
 $ git remote remove origin
 ```
-
+Now, 
 ``` bash
 $ git remote -v
 ```
 showed nothing, confirming that the remote origin got deleted.
+Now, I added the remote orign with the correct URL.
 
 ``` bash
 $ git remote add origin  https://github.com/hazraChandrima/learning-git.git
@@ -261,14 +249,19 @@ $ git remote add origin  https://github.com/hazraChandrima/learning-git.git
 ``` bash
 $ git remote -v
 ```
+which showed:
 
 ```origin  https://github.com/hazraChandrima/learning-git.git (fetch)```
 
 ```origin  https://github.com/hazraChandrima/learning-git.git (push)```
 
+
+## Pushing my files to origin
+
 ``` bash
 $ git branch -M main
 ```
+The above command renames the current branch wto main.
 
 ``` bash
 $ git push -u origin main
@@ -278,7 +271,13 @@ And I was done.
 
 ....pushing my files to the repository.
 
-I edited this README.md file on GitHub, and wanted to update my local Git repo as well.
+#
+
+I then edited this README.md file on GitHub, and wanted to update my local Git repo as well. So, I have to pull the latest changes from the origin.
+
+## Pulling changes from the origin
+
+### Difference between local main and origin/main
 
 ``` bash
 $ git status
@@ -292,16 +291,19 @@ Your branch is behind 'origin/main' by 1 commit, and can be fast-forwarded.
 nothing to commit, working tree clean.
 ```
 
-``` bash
-$ git fetch origin
-```
-
+Now, to view the difference between local and origin:
 ``` bash
 $ git log origin/main
 ```
-
 ``` bash
 $ git diff origin/main
+```
+
+### Pulling from the origin
+
+You can either do fetch and merge:
+``` bash
+$ git fetch origin
 ```
 
 ``` bash
@@ -321,25 +323,25 @@ nothing to commit, working tree clean.
 ```
 👍
 
-This can be done in another, much shorter way as well, by using the pull command, which is a combination of fetch and pull command.
+OR
 
-``` bash 
-$ git diff origin/main
-```
+This can be done in another, much shorter way as well, by using the pull command, which is a combination of fetch and merge command.
 
 ``` bash
 $ git pull origin
 ```
 
+#
 ## Forking a repository
+
 1. Copy the original repository URL.
 2. Fork the repo.
-## Cloning a repository
+### Cloning a repository
 3.
 ``` bash
 $ git clone <original repo URL>
 ```
-## Configuring remotes
+### Configuring remotes
 4.
 ``` bash
 $ git remote -v
@@ -349,7 +351,6 @@ we see that the remote origin is set to the original repository. By convention, 
 $ git remote rename origin upstream
 ```
 5. Copy the URL of our own fork, and set remote origin to our forked repo.
-6.
 ``` bash
 $ git add remote origin <forked repo URL>
 ```
