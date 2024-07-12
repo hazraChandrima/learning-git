@@ -82,7 +82,7 @@ It shows all the previous commits you have done for this repo, along with the SH
 
 ### Reverting back to any of the previous commits :
 ``` bash
-$ git revert <SHA sequence (of the commit we want to revrt back to)>
+$ git revert <SHA sequence (of the commit we want to revert back to)>
 ```
 
 #
