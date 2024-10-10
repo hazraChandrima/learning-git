@@ -352,7 +352,7 @@ $ git remote rename origin upstream
 ```
 5. Copy the URL of our own fork, and set remote origin to our forked repo.
 ``` bash
-$ git add remote origin <forked repo URL>
+$ git remote add origin <forked repo URL>
 ```
 #
 
